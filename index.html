@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Resizer</title>
+		<link href="resizer.css" rel="stylesheet" />
+		
+		<style>
+			#resize-holder {
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="resize-holder"></div>
+		<script src="resizer.js"></script>
+		<script>
+			
+			var resizer = new Resizer({
+				"wrapper" : document.querySelector("#resize-holder"),
+				"file" : "awesome-bridge-natural-image.jpg",
+				"ratio" : "1:1",
+				"onchange" : function() {
+					console.log(resizer.getValues());
+				}
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,129 @@
+.resizer {
+	position: relative;
+	width: 900px
+}
+
+.resizer img {
+	position: absolute;
+	opacity: 0;
+	cursor : move;
+}
+
+.resizer .side-holder {
+	position: absolute;
+	
+	width : 50px;
+	height : 50px;	
+	
+	top : auto;
+	right : auto;
+	bottom : auto;
+	left : auto;
+}
+
+.resizer .side-holder.top {
+	top : 0;
+}
+
+.resizer .side-holder.right {
+	right : 0;
+}
+
+.resizer .side-holder.bottom {
+	bottom : 0;
+}
+
+.resizer .side-holder.left {
+	left: 0;
+}
+
+.resizer .side-holder.top,
+.resizer .side-holder.bottom {
+	left : 50px;
+	width: calc(100% - 100px);
+}
+
+.resizer .side-holder.left,
+.resizer .side-holder.right {
+	top : 50px;
+	height: calc(100% - 100px);
+}
+
+.resizer .side-holder .background {
+	background: #000;
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+}
+
+.resizer .side-holder .handle {
+	background: red;
+	position: absolute;
+}
+
+.resizer .side-holder.top .handle,
+.resizer .side-holder.bottom .handle {
+	width: 100%;
+	height: 2px;
+	left : 0px;
+	cursor : ns-resize;
+}
+
+.resizer .side-holder.right .handle,
+.resizer .side-holder.left .handle {
+	height: 100%;
+	width: 2px;
+	top : 0px;
+	cursor : ew-resize;
+}
+
+.resizer .side-holder.top .handle {
+	bottom : 0px;
+}
+
+.resizer .side-holder.right .handle {
+	left : 0px;
+}
+
+.resizer .side-holder.bottom .handle {
+	top : 0px;
+}
+
+.resizer .side-holder.left .handle {
+	right : 0px;
+}
+
+.resizer .corner {
+	width : 50px;
+	height: 50px;
+	
+	opacity: 0.5;
+	background: #000;
+	
+	position: absolute;
+	
+	top : auto;
+	right : auto;
+	bottom : auto;
+	left : auto;
+}
+
+.resizer .corner.topleft {
+	left: 0px;
+	top: 0px;
+}
+
+.resizer .corner.topright {
+	right: 0px;
+	top: 0px;
+}
+
+.resizer .corner.bottomright {
+	right: 0px;
+	bottom: 0px;
+}
+
+.resizer .corner.bottomleft {
+	left: 0px;
+	bottom: 0px;
+}
